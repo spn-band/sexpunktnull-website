@@ -1,0 +1,84 @@
+/* ============================================
+   HEADER.CSS - Navigation & Logo
+   ============================================ */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--neon-pink);
+    box-shadow: 0 0 20px rgba(255, 0, 128, 0.5);
+    z-index: 100;
+    padding: 1rem 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo {
+    height: 60px;
+}
+
+.logo img {
+    height: 100%;
+    width: auto;
+    filter: drop-shadow(0 0 10px rgba(255, 0, 128, 0.8));
+    animation: logoGlow 3s ease-in-out infinite;
+}
+
+@keyframes logoGlow {
+    0%, 100% { 
+        filter: drop-shadow(0 0 10px rgba(255, 0, 128, 0.8)) 
+                drop-shadow(0 0 20px rgba(0, 255, 136, 0.5)); 
+    }
+    50% { 
+        filter: drop-shadow(0 0 20px rgba(255, 0, 128, 1)) 
+                drop-shadow(0 0 30px rgba(0, 255, 136, 0.8)); 
+    }
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    transition: all 0.3s;
+    text-shadow: 0 0 5px rgba(0, 255, 136, 0.5);
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--neon-pink), var(--neon-green), var(--neon-cyan));
+    box-shadow: 0 0 10px var(--neon-pink);
+    transition: width 0.3s;
+}
+
+nav a:hover {
+    color: var(--neon-pink);
+    text-shadow: 0 0 15px var(--neon-pink), 0 0 30px var(--neon-green);
+}
+
+nav a:hover::after {
+    width: 100%;
+}

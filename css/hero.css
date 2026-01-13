@@ -1,0 +1,145 @@
+/* ============================================
+   HERO.CSS - Hero Section, Logo & Particles
+   ============================================ */
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 80px;
+}
+
+.hero-logo-wrapper {
+    position: relative;
+    width: 80%;
+    max-width: 900px;
+    margin-bottom: 2rem;
+    z-index: 2;
+}
+
+.hero-logo-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/sexpunktnull_logo_shirt_60x30cm_neon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(40px) brightness(2) saturate(4);
+    opacity: 0;
+    transition: opacity 0.3s linear;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.hero-logo-wrapper.glow-active::before {
+    opacity: 1.0;
+}
+
+.hero-logo {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 0 30px rgba(255, 0, 128, 0.8))
+            drop-shadow(0 0 50px rgba(0, 255, 136, 0.6))
+            drop-shadow(0 0 70px rgba(0, 212, 255, 0.4));
+}
+
+.hero-subtitle {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    background: linear-gradient(90deg, var(--neon-pink), var(--neon-green), var(--neon-cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 8px;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    z-index: 2;
+    animation: fadeSlideUp 1s ease-out 0.5s both;
+    text-shadow: 0 0 20px rgba(255, 0, 128, 0.5);
+}
+
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* CTA Button */
+.cta-button {
+    margin-top: 3rem;
+    padding: 1.5rem 3rem;
+    background: transparent;
+    color: var(--neon-pink);
+    border: 3px solid var(--neon-pink);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    transition: all 0.3s linear;
+    animation: fadeSlideUp 1s ease-out 1s both;
+    box-shadow: 0 0 20px rgba(255, 0, 128, 0.5),
+                inset 0 0 20px rgba(255, 0, 128, 0.1);
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--neon-pink), var(--neon-green));
+    transition: left 0.3s linear;
+    z-index: -1;
+}
+
+.cta-button:hover::before {
+    left: 0;
+}
+
+.cta-button:hover {
+    color: var(--bg-dark);
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(255, 0, 128, 1),
+                0 0 60px rgba(0, 255, 136, 0.8);
+    border-color: var(--neon-green);
+}
+
+/* Particles */
+.particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    transition: all 0.3s ease-out;
+}
+
+.particle:nth-child(3n+1) { background: var(--neon-pink); }
+.particle:nth-child(3n+2) { background: var(--neon-green); }
+.particle:nth-child(3n+3) { background: var(--neon-cyan); }

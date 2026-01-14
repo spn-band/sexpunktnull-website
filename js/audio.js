@@ -3,8 +3,8 @@
 // ============================================
 
 // Audio objects for sound effects
-const hoverSound = new Audio('/sounds/hover.wav');
-const clickSound = new Audio('/sounds/click.wav');
+const hoverSound = new Audio('sounds/hover.mp3');
+const clickSound = new Audio('sounds/click.mp3');
 
 // Set volume (0.0 to 1.0)
 hoverSound.volume = 0.5;

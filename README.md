@@ -1,11 +1,11 @@
-# SEXPUNKTNULL Website - v006
+# SEXPUNKTNULL Website - v007
 
 Offizielle Website der Punk/Rock/Metal Band SEXPUNKTNULL.
 
-## 📦 Version: v006
-**Datum:** 2025-01-14  
+## 📦 Version: v007
+**Datum:** 2025-01-17  
 **Status:** ✅ Produktionsbereit  
-**Änderungen:** Auto-Pause für Audio Player + Aktualisierte Inhalte
+**Änderungen:** SoundCloud Embed Player + Platform Buttons für alle 3 Songs
 
 ## ✨ Features
 
@@ -16,8 +16,9 @@ Offizielle Website der Punk/Rock/Metal Band SEXPUNKTNULL.
 - **Scanline & Gradient Background** - Animierte Retro-CRT-Effekte
 - **Responsive Design** - Optimiert für Mobile & Desktop
 - **Vergangene Shows Galerie** - Mit Bild-Thumbnails und Hover-Effekten
-- **Custom Audio Player** - HTML5 Audio für direkte MP3-Wiedergabe
-- **Auto-Pause Funktion** - Nur ein Song läuft gleichzeitig (NEU in v006)
+- **SoundCloud Embed Player** - Große Player mit Cover-Artwork (NEU in v007)
+- **Platform Buttons** - Links zu SoundCloud & Bandcamp (NEU in v007)
+- **Auto-Pause Funktion** - Nur ein Song läuft gleichzeitig
 
 ### Interaktivität
 - **Sound-Effekte** - Hover & Click auf allen interaktiven Elementen
@@ -29,13 +30,13 @@ Offizielle Website der Punk/Rock/Metal Band SEXPUNKTNULL.
 ### Modulare Struktur
 
 ```
-v006/
-├── index.html          (~295 Zeilen - mit deinen Updates)
+v007/
+├── index.html          (~382 Zeilen - mit SoundCloud Playern)
 ├── css/
 │   ├── base.css        (73 Zeilen)   - Variables, Reset, Background
 │   ├── header.css      (84 Zeilen)   - Navigation & Logo
 │   ├── hero.css        (145 Zeilen)  - Hero, Logo, Button, Particles
-│   ├── sections.css    (~440 Zeilen) - About, Shows, Past Shows, Music
+│   ├── sections.css    (~490 Zeilen) - About, Shows, Music, Platform Buttons
 │   ├── videos.css      (76 Zeilen)   - YouTube Section
 │   └── layout.css      (141 Zeilen)  - Contact, Footer, Responsive
 ├── js/
@@ -43,14 +44,14 @@ v006/
 │   ├── navigation.js   (56 Zeilen)   - Scrolling & Navigation
 │   ├── animations.js   (41 Zeilen)   - Logo-Pulsing, Parallax
 │   ├── particles.js    (120 Zeilen)  - Partikel-Generierung & Animation
-│   └── music-player.js (19 Zeilen)   - Auto-Pause (NEU in v006)
+│   └── music-player.js (19 Zeilen)   - Auto-Pause
 ├── images/
 │   ├── sexpunktnull_logo_shirt_60x30cm_neon.png
 │   └── shows/          - Show-Fotos
 ├── sounds/
-│   ├── hover.wav
-│   ├── click.wav
-│   └── music/          - MP3-Dateien (track_der_sinn.mp3, etc.)
+│   ├── hover.mp3
+│   ├── click.mp3
+│   └── music/          - (optional für lokale MP3s)
 └── README.md
 ```
 
@@ -123,6 +124,33 @@ In `index.html` (Zeile ~210-280):
 </div>
 ```
 **Bilder:** Lege Fotos in `images/shows/` ab (empfohlen: 800x500px, JPG)
+
+### SoundCloud Player anpassen (NEU in v007)
+In `index.html` findest du für jeden Song einen SoundCloud Embed:
+
+```html
+<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" 
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/DEINE_TRACK_ID&color=%2360c08c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+</iframe>
+```
+
+**So holst du deine SoundCloud Embed URL:**
+1. Gehe zu deinem Track auf SoundCloud
+2. Klicke auf "Share" → "Embed"
+3. Kopiere die iframe URL
+4. Ersetze die URL im `src="..."` Attribut
+
+**Platform Buttons anpassen:**
+```html
+<div class="platform-buttons">
+    <a href="https://soundcloud.com/sexpunktnull/dein-song" target="_blank" class="platform-btn soundcloud">
+        🎵 SOUNDCLOUD
+    </a>
+    <a href="https://sexpunktnull.bandcamp.com/track/dein-song" target="_blank" class="platform-btn bandcamp">
+        💿 BANDCAMP
+    </a>
+</div>
+```
 
 ### Musik-Dateien hinzufügen (NEU in v005)
 1. **MP3-Dateien vorbereiten:**
@@ -207,8 +235,8 @@ In `css/hero.css` (Zeile 44):
 
 ---
 
-**Version:** v006  
-**Erstellt:** 2025-01-14  
-**Basiert auf:** v005  
-**Änderungen:** Auto-Pause für Audio Player + Content-Updates  
-**Nächste Version:** v007 (bei Änderungen)
+**Version:** v007  
+**Erstellt:** 2025-01-17  
+**Basiert auf:** v006  
+**Änderungen:** SoundCloud Embed Player + Platform Buttons für alle 3 Songs  
+**Nächste Version:** v008 (bei Änderungen)

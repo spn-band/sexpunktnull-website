@@ -1,9 +1,9 @@
-# SEXPUNKTNULL Website - v007
+# SEXPUNKTNULL Website - v008
 
-Offizielle Website der Punk/Rock/Metal Band SEXPUNKTNULL.
+Offizielle Website der Punk/Rock/Metal Band SexPunktNull.
 
-## 📦 Version: v007
-**Datum:** 2025-01-17  
+## 📦 Version: v008
+**Datum:** 2025-01-20  
 **Status:** ✅ Produktionsbereit  
 **Änderungen:** SoundCloud Embed Player + Platform Buttons für alle 3 Songs
 
@@ -30,7 +30,7 @@ Offizielle Website der Punk/Rock/Metal Band SEXPUNKTNULL.
 ### Modulare Struktur
 
 ```
-v007/
+v008/
 ├── index.html          (~382 Zeilen - mit SoundCloud Playern)
 ├── css/
 │   ├── base.css        (73 Zeilen)   - Variables, Reset, Background
@@ -52,7 +52,10 @@ v007/
 │   ├── hover.mp3
 │   ├── click.mp3
 │   └── music/          - (optional für lokale MP3s)
-└── README.md
+├── README.md
+├── sitemap.xml
+├── robots.txt
+└── CNAME
 ```
 
 ## 🚀 Installation

@@ -2,6 +2,9 @@
 // PARTICLES MODULE - Turbulent Neon Particles
 // ============================================
 
+// TEMPORARILY DISABLED - Uncomment below to re-enable
+
+/*
 // PARTICLE COUNT - Change this number to adjust particle count
 const PARTICLE_COUNT = 100;
 
@@ -23,7 +26,7 @@ const particles = document.querySelectorAll('.particle');
 if (particles.length > 0 && particlesContainer) {
     const containerWidth = particlesContainer.offsetWidth;
     const containerHeight = particlesContainer.offsetHeight;
-    
+
     // Initialize particles with random positions and velocities
     const particleData = Array.from(particles).map((particle, index) => ({
         element: particle,
@@ -36,7 +39,7 @@ if (particles.length > 0 && particlesContainer) {
         scale: 0.5 + Math.random() * 1.0,
         opacity: 0.3 + Math.random() * 0.4
     }));
-    
+
     // Simple Perlin-like noise function for smooth random values
     function noise(x) {
         const X = Math.floor(x) & 255;
@@ -46,22 +49,22 @@ if (particles.length > 0 && particlesContainer) {
         const b = Math.sin((X + 1) * 12.9898 + 78.233) * 43758.5453;
         return (a - Math.floor(a)) * (1 - u) + (b - Math.floor(b)) * u;
     }
-    
+
     let time = 0;
-    
+
     // Main animation loop
     function animateParticles() {
         time += 0.01;
-        
+
         particleData.forEach(p => {
             // Apply noise-based turbulence for organic movement
             const noiseX = noise(p.noiseOffsetX + time) * 2 - 1;
             const noiseY = noise(p.noiseOffsetY + time) * 2 - 1;
-            
+
             // Turbulent force
             p.vx += noiseX * 0.5;
             p.vy += noiseY * 0.5;
-            
+
             // Speed limit to prevent particles from going too fast
             const maxSpeed = 3;
             const speed = Math.sqrt(p.vx * p.vx + p.vy * p.vy);
@@ -69,15 +72,15 @@ if (particles.length > 0 && particlesContainer) {
                 p.vx = (p.vx / speed) * maxSpeed;
                 p.vy = (p.vy / speed) * maxSpeed;
             }
-            
+
             // Damping to prevent too much speed buildup
             p.vx *= 0.95;
             p.vy *= 0.95;
-            
+
             // Update position
             p.x += p.vx;
             p.y += p.vy;
-            
+
             // Bounce at edges instead of wrapping around
             if (p.x < 0) {
                 p.x = 0;
@@ -95,11 +98,11 @@ if (particles.length > 0 && particlesContainer) {
                 p.y = containerHeight;
                 p.vy *= -0.8;
             }
-            
+
             // Random scale and opacity variations for flickering effect
             const scaleNoise = noise(p.noiseOffsetX + time * 2) * 0.3 + 0.7;
             const opacityNoise = noise(p.noiseOffsetY + time * 2) * 0.4 + 0.4;
-            
+
             // Apply all transformations to particle element
             p.element.style.left = `${p.x}px`;
             p.element.style.top = `${p.y}px`;
@@ -107,10 +110,11 @@ if (particles.length > 0 && particlesContainer) {
             p.element.style.opacity = opacityNoise;
             p.element.style.boxShadow = `0 0 ${10 + opacityNoise * 20}px currentColor`;
         });
-        
+
         requestAnimationFrame(animateParticles);
     }
-    
+
     // Start the animation
     animateParticles();
 }
+*/

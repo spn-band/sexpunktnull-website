@@ -198,8 +198,16 @@
     }
 }
 
-/* Touch devices - disable hover slide effect */
+/* Touch devices - disable heavy effects */
 @media (hover: none) {
+    .hero-logo {
+        filter: drop-shadow(0 0 15px rgba(255, 0, 128, 0.6));
+    }
+
+    .hero-logo-wrapper::before {
+        display: none;
+    }
+
     .cta-button::before {
         display: none;
     }

@@ -71,3 +71,15 @@ body::after {
     0% { transform: translateY(0); }
     100% { transform: translateY(50px); }
 }
+
+/* Disable heavy effects on touch devices (iOS/mobile) */
+@media (hover: none) {
+    body::before {
+        animation: none;
+        opacity: 0.8;
+    }
+
+    body::after {
+        display: none;
+    }
+}

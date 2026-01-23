@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-01-23 - Shows Neon Style
+### Changed
+- Upcoming shows: Pink neon borders, green hover glow, sweep animation
+- Past shows: Cyan neon borders, pink hover glow, sweep animation
+- Ticket buttons: Glass style like ABDREHEN - gray default, gradient on hover
+- Cache: v26
+
 ## 2026-01-23 - Logo Scroll Fix (Final)
 ### Fixed
 - **animations.js**: Disabled parallax effect (translateY) causing logo to lag behind page scroll

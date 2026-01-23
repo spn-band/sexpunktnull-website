@@ -30,8 +30,8 @@ if (heroLogo) {
         const intensity = 1 + (Math.random() * 0.02 - 0.01); // 0.99 to 1.01
         const duration = 100 + Math.random() * 200; // 100-300ms
         
-        heroLogo.style.transition = `transform ${duration}ms ease-out`;
-        heroLogo.style.transform = `scale(${intensity})`;
+        // heroLogo.style.transition = `transform ${duration}ms ease-out`;
+        //heroLogo.style.transform = `scale(${intensity})`;
         
         const nextPulseDelay = 50 + Math.random() * 150; // 50-200ms until next pulse
         setTimeout(randomPulse, nextPulseDelay);

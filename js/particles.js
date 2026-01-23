@@ -6,7 +6,8 @@
 
 
 // PARTICLE COUNT - Change this number to adjust particle count
-const PARTICLE_COUNT = 100;
+// Reduced from 100 to 40 for better performance
+const PARTICLE_COUNT = 40;
 
 // Generate particles dynamically
 const particlesContainer = document.querySelector('.particles');
@@ -51,9 +52,21 @@ if (particles.length > 0 && particlesContainer) {
     }
 
     let time = 0;
+    let lastFrame = 0;
+    const targetFPS = 30; // Throttle to 30fps instead of 60fps
+    const frameInterval = 1000 / targetFPS;
 
-    // Main animation loop
-    function animateParticles() {
+    // Main animation loop - OPTIMIZED
+    function animateParticles(currentTime) {
+        const elapsed = currentTime - lastFrame;
+
+        // Throttle to 30fps
+        if (elapsed < frameInterval) {
+            requestAnimationFrame(animateParticles);
+            return;
+        }
+
+        lastFrame = currentTime;
         time += 0.01;
 
         particleData.forEach(p => {
@@ -84,7 +97,7 @@ if (particles.length > 0 && particlesContainer) {
             // Bounce at edges instead of wrapping around
             if (p.x < 0) {
                 p.x = 0;
-                p.vx *= -0.8; // Reverse direction and dampen
+                p.vx *= -0.8;
             }
             if (p.x > containerWidth) {
                 p.x = containerWidth;
@@ -99,16 +112,13 @@ if (particles.length > 0 && particlesContainer) {
                 p.vy *= -0.8;
             }
 
-            // Random scale and opacity variations for flickering effect
-            const scaleNoise = noise(p.noiseOffsetX + time * 2) * 0.3 + 0.7;
+            // Random opacity variations (removed scale for performance)
             const opacityNoise = noise(p.noiseOffsetY + time * 2) * 0.4 + 0.4;
 
-            // Apply all transformations to particle element
-            p.element.style.left = `${p.x}px`;
-            p.element.style.top = `${p.y}px`;
-            p.element.style.transform = `scale(${p.scale * scaleNoise})`;
+            // Use transform translate instead of left/top (GPU accelerated)
+            // Removed boxShadow (most expensive operation)
+            p.element.style.transform = `translate(${p.x}px, ${p.y}px) scale(${p.scale})`;
             p.element.style.opacity = opacityNoise;
-            p.element.style.boxShadow = `0 0 ${10 + opacityNoise * 20}px currentColor`;
         });
 
         requestAnimationFrame(animateParticles);

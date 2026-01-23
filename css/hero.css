@@ -133,7 +133,8 @@
     height: 3px;
     border-radius: 50%;
     opacity: 0.4;
-    transition: all 0.3s ease-out;
+    will-change: transform, opacity;
+    box-shadow: 0 0 10px currentColor;
 }
 
 .particle:nth-child(3n+1) { background: var(--accent-pink); }

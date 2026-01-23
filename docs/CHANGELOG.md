@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-01-23 - Particle Performance
+### Optimized
+- Reduced particles: 100 → 40
+- Throttled to 30fps (was 60fps)
+- GPU acceleration: transform translate instead of left/top
+- Removed dynamic boxShadow (now static CSS)
+- Removed scale flickering
+- Added will-change hint
+- ~70% CPU reduction
+
 ## 2026-01-23 - Scanline Effect
 ### Added
 - CRT-style scanline effect in separate css/scanline.css (easy to disable by commenting out)

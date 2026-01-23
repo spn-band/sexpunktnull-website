@@ -1,5 +1,31 @@
 # Changelog
 
+## [2025-01-22] - Glassmorphism Redesign
+
+### Changed - FULL DESIGN OVERHAUL
+- **Design system**: Cyberpunk neon → Glassmorphism (frosted glass, translucent, futuristic)
+- **Color palette**: Deep purples (#0f0c29 → #302b63) with accent pink/purple/blue gradients
+- **Background**: Fixed gradient with animated mesh overlay
+- **All cards**: Glass effect (backdrop-filter: blur, translucent borders, soft shadows)
+- **Navigation**: Frosted glass header with subtle gradient underlines
+- **CTA button**: Pill-shaped glass button with gradient hover fill
+- **Ticket buttons**: Gradient pill buttons with purple glow
+- **Social links**: Glass squares with colored accents
+- **Footer**: Frosted glass with subtle border
+- **Videos**: Glass card containers with rounded iframe corners
+- **Sections**: Consistent glass panels for all content
+- **Hover effects**: Subtle translateY lifts with purple glow shadows
+- **Scrollbar**: Custom glass-themed scrollbar
+
+### Technical
+- CSS variables for glass properties (--glass-white, --glass-border, etc.)
+- Legacy color variable compatibility maintained
+- `-webkit-backdrop-filter` for Safari support
+- Mesh gradient animation disabled on touch devices
+- All cache versions bumped to v=10
+
+---
+
 ## [2025-01-22] - UI/Mobile Fixes
 
 ### Fixed

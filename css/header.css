@@ -1,15 +1,16 @@
 /* ============================================
-   HEADER.CSS - Navigation & Logo
+   HEADER.CSS - Glassmorphism Navigation
    ============================================ */
 
 header {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(10, 10, 10, 0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 2px solid var(--neon-pink);
-    box-shadow: 0 0 20px rgba(255, 0, 128, 0.5);
+    background: rgba(15, 12, 41, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--glass-border);
+    box-shadow: 0 4px 30px var(--glass-shadow);
     z-index: 100;
     padding: 1rem 2rem;
 }
@@ -23,25 +24,18 @@ nav {
 }
 
 .logo {
-    height: 60px;
+    height: 50px;
 }
 
 .logo img {
     height: 100%;
     width: auto;
-    filter: drop-shadow(0 0 10px rgba(255, 0, 128, 0.8));
-    animation: logoGlow 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 8px rgba(196, 113, 237, 0.4));
+    transition: filter 0.3s ease;
 }
 
-@keyframes logoGlow {
-    0%, 100% { 
-        filter: drop-shadow(0 0 10px rgba(255, 0, 128, 0.8)) 
-                drop-shadow(0 0 20px rgba(0, 255, 136, 0.5)); 
-    }
-    50% { 
-        filter: drop-shadow(0 0 20px rgba(255, 0, 128, 1)) 
-                drop-shadow(0 0 30px rgba(0, 255, 136, 0.8)); 
-    }
+.logo img:hover {
+    filter: drop-shadow(0 0 15px rgba(196, 113, 237, 0.7));
 }
 
 nav ul {
@@ -51,15 +45,14 @@ nav ul {
 }
 
 nav a {
-    color: var(--text);
+    color: var(--text-muted);
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
     position: relative;
-    transition: all 0.3s;
-    text-shadow: 0 0 5px rgba(0, 255, 136, 0.5);
+    transition: color 0.3s ease;
 }
 
 nav a::after {
@@ -69,14 +62,13 @@ nav a::after {
     left: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(90deg, var(--neon-pink), var(--neon-green), var(--neon-cyan));
-    box-shadow: 0 0 10px var(--neon-pink);
-    transition: width 0.3s;
+    background: linear-gradient(90deg, var(--accent-pink), var(--accent-purple), var(--accent-blue));
+    border-radius: 2px;
+    transition: width 0.3s ease;
 }
 
 nav a:hover {
-    color: var(--neon-pink);
-    text-shadow: 0 0 15px var(--neon-pink), 0 0 30px var(--neon-green);
+    color: var(--text);
 }
 
 nav a:hover::after {

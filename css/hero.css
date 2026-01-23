@@ -1,5 +1,5 @@
 /* ============================================
-   HERO.CSS - Hero Section, Logo & Particles
+   HERO.CSS - Glassmorphism Hero Section
    ============================================ */
 
 .hero {
@@ -17,7 +17,7 @@
 .hero-logo-wrapper {
     position: relative;
     width: 80%;
-    max-width: 900px;
+    max-width: 800px;
     margin-bottom: 2rem;
     margin-top: auto;
     z-index: 2;
@@ -26,38 +26,29 @@
 .hero-logo-wrapper::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('../images/sexpunktnull_logo_shirt_60x30cm_neon.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    filter: blur(40px) brightness(2) saturate(4);
-    opacity: 0;
-    transition: opacity 0.3s linear;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    background: radial-gradient(ellipse, rgba(196, 113, 237, 0.2) 0%, transparent 70%);
+    filter: blur(40px);
     pointer-events: none;
     z-index: -1;
-}
-
-.hero-logo-wrapper.glow-active::before {
-    opacity: 1.0;
 }
 
 .hero-logo {
     width: 100%;
     height: auto;
     display: block;
-    filter: drop-shadow(0 0 30px rgba(255, 0, 128, 0.8))
-            drop-shadow(0 0 50px rgba(0, 255, 136, 0.6))
-            drop-shadow(0 0 70px rgba(0, 212, 255, 0.4));
+    filter: drop-shadow(0 0 20px rgba(196, 113, 237, 0.4))
+            drop-shadow(0 0 40px rgba(18, 194, 233, 0.2));
 }
 
 .hero-subtitle {
     font-family: 'Bebas Neue', sans-serif;
     font-size: clamp(1.5rem, 4vw, 3rem);
-    background: linear-gradient(90deg, var(--neon-pink), var(--neon-green), var(--neon-cyan));
+    background: linear-gradient(90deg, var(--accent-pink), var(--accent-purple), var(--accent-blue));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -66,7 +57,6 @@
     text-transform: uppercase;
     z-index: 2;
     animation: fadeSlideUp 1s ease-out 0.5s both;
-    text-shadow: 0 0 20px rgba(255, 0, 128, 0.5);
 }
 
 @keyframes fadeSlideUp {
@@ -80,27 +70,28 @@
     }
 }
 
-/* CTA Button */
+/* CTA Button - Glass Style */
 .cta-button {
     margin-top: 3rem;
     margin-bottom: auto;
-    padding: 1.5rem 3rem;
-    background: transparent;
-    color: var(--neon-pink);
-    border: 3px solid var(--neon-pink);
-    border-radius: 5px;
+    padding: 1.2rem 3rem;
+    background: var(--glass-white);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: var(--text);
+    border: 1px solid var(--glass-border);
+    border-radius: 50px;
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.8rem;
-    letter-spacing: 3px;
+    font-size: 1.6rem;
+    letter-spacing: 4px;
     text-transform: uppercase;
     cursor: pointer;
     position: relative;
     overflow: hidden;
     z-index: 2;
-    transition: all 0.3s linear;
+    transition: all 0.4s ease;
     animation: fadeSlideUp 1s ease-out 1s both;
-    box-shadow: 0 0 20px rgba(255, 0, 128, 0.5),
-                inset 0 0 20px rgba(255, 0, 128, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 .cta-button::before {
@@ -110,22 +101,21 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, var(--neon-pink), var(--neon-green));
-    transform: translateX(-101%);
-    transition: transform 0.3s linear;
+    background: linear-gradient(135deg, var(--accent-pink), var(--accent-purple));
+    opacity: 0;
+    transition: opacity 0.4s ease;
     z-index: -1;
-}
-
-.cta-button:hover::before {
-    transform: translateX(0);
+    border-radius: 50px;
 }
 
 .cta-button:hover {
-    color: var(--bg-dark);
-    transform: scale(1.05);
-    box-shadow: 0 0 40px rgba(255, 0, 128, 1),
-                0 0 60px rgba(0, 255, 136, 0.8);
-    border-color: var(--neon-green);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(196, 113, 237, 0.3);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.cta-button:hover::before {
+    opacity: 1;
 }
 
 /* Particles */
@@ -139,15 +129,16 @@
 
 .particle {
     position: absolute;
-    width: 4px;
-    height: 4px;
+    width: 3px;
+    height: 3px;
     border-radius: 50%;
+    opacity: 0.4;
     transition: all 0.3s ease-out;
 }
 
-.particle:nth-child(3n+1) { background: var(--neon-pink); }
-.particle:nth-child(3n+2) { background: var(--neon-green); }
-.particle:nth-child(3n+3) { background: var(--neon-cyan); }
+.particle:nth-child(3n+1) { background: var(--accent-pink); }
+.particle:nth-child(3n+2) { background: var(--accent-purple); }
+.particle:nth-child(3n+3) { background: var(--accent-blue); }
 
 /* ===================
    HERO RESPONSIVE
@@ -198,17 +189,13 @@
     }
 }
 
-/* Touch devices - disable heavy effects */
+/* Touch devices */
 @media (hover: none) {
     .hero-logo {
-        filter: drop-shadow(0 0 15px rgba(255, 0, 128, 0.6));
+        filter: drop-shadow(0 0 10px rgba(196, 113, 237, 0.3));
     }
 
     .hero-logo-wrapper::before {
-        display: none;
-    }
-
-    .cta-button::before {
         display: none;
     }
 
@@ -216,8 +203,7 @@
         transform: none;
     }
 
-    .cta-button:active {
-        background: linear-gradient(90deg, var(--neon-pink), var(--neon-green));
-        color: var(--bg-dark);
+    .cta-button:active::before {
+        opacity: 1;
     }
 }

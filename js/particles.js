@@ -29,17 +29,28 @@ if (particles.length > 0 && particlesContainer) {
     const containerHeight = particlesContainer.offsetHeight;
 
     // Initialize particles with random positions and velocities
-    const particleData = Array.from(particles).map((particle, index) => ({
-        element: particle,
-        x: Math.random() * containerWidth,
-        y: Math.random() * containerHeight,
-        vx: (Math.random() - 0.5) * 2,
-        vy: (Math.random() - 0.5) * 2,
-        noiseOffsetX: Math.random() * 1000,
-        noiseOffsetY: Math.random() * 1000,
-        scale: 0.5 + Math.random() * 1.0,
-        opacity: 0.3 + Math.random() * 0.4
-    }));
+    const particleData = Array.from(particles).map((particle, index) => {
+        const x = Math.random() * containerWidth;
+        const y = Math.random() * containerHeight;
+        const scale = 0.5 + Math.random() * 1.0;
+        const opacity = 0.3 + Math.random() * 0.4;
+
+        // Set initial position immediately
+        particle.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
+        particle.style.opacity = opacity;
+
+        return {
+            element: particle,
+            x: x,
+            y: y,
+            vx: (Math.random() - 0.5) * 2,
+            vy: (Math.random() - 0.5) * 2,
+            noiseOffsetX: Math.random() * 1000,
+            noiseOffsetY: Math.random() * 1000,
+            scale: scale,
+            opacity: opacity
+        };
+    });
 
     // Simple Perlin-like noise function for smooth random values
     function noise(x) {

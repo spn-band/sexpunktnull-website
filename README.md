@@ -1,56 +1,57 @@
-# SEXPUNKTNULL Website - v008
+# SEXPUNKTNULL Website
 
 Offizielle Website der Punk/Rock/Metal Band SexPunktNull.
 
-## 📦 Version: v008
-**Datum:** 2025-01-20  
-**Status:** ✅ Produktionsbereit  
-**Änderungen:** SoundCloud Embed Player + Platform Buttons für alle 3 Songs
+**Status:** ✅ Produktionsbereit
 
 ## ✨ Features
 
 ### Design
-- **Neon Cyberpunk Aesthetic** - Pink (#ff0080), Grün (#00ff88), Cyan (#00d4ff)
-- **100 Turbulente Partikel** - Noise-basierte organische Animation
-- **Logo-Glow Effekt** - Beim Hover über ABDREHEN-Button
-- **Scanline & Gradient Background** - Animierte Retro-CRT-Effekte
+- **Dark Cyberpunk Aesthetic** - Super-dunkler Hintergrund (#000), Neon-Akzente
+- **Neon Color Gradients** - Pink (#ff0080) → Grün (#00ff88) → Cyan (#00d4ff)
+- **40 Optimierte Partikel** - GPU-beschleunigt, 30fps, ~70% weniger CPU-Last
+- **CRT Scanline Effekt** - Optional aktivierbar (css/scanline.css)
+- **Neon Show Tiles** - Glühende Ränder mit Sweep-Animationen
+- **Compact Layout** - Reduzierte Abstände für bessere Mobile-Ansicht
 - **Responsive Design** - Optimiert für Mobile & Desktop
-- **Vergangene Shows Galerie** - Mit Bild-Thumbnails und Hover-Effekten
-- **SoundCloud Embed Player** - Große Player mit Cover-Artwork (NEU in v007)
-- **Platform Buttons** - Links zu SoundCloud & Bandcamp (NEU in v007)
+- **Vergangene Shows Galerie** - Mit Bild-Thumbnails und Neon-Hover-Effekten
+- **SoundCloud Embed Player** - Große Player mit Cover-Artwork
+- **Platform Buttons** - Links zu SoundCloud & Bandcamp
 - **Auto-Pause Funktion** - Nur ein Song läuft gleichzeitig
 
 ### Interaktivität
-- **Sound-Effekte** - Hover & Click auf allen interaktiven Elementen
+- **Sound-Effekte** - Hover (hover.mp3) & Click sounds
+- **Impact Sound** - ABDREHEN Button mit impact.mp3
 - **Smooth Scrolling** - Zu allen Sektionen
-- **Logo-Pulsing** - Zufällige organische Puls-Animation
-- **Parallax-Effekt** - Hero-Logo bewegt sich beim Scrollen
-- **YouTube-Integration** - 3 eingebettete Videos
+- **Logo-Pulsing** - Zufällige organische Puls-Animation (optional)
+- **Scroll-Optimierung** - Kein Parallax/Jitter auf mobilen Geräten
+- **YouTube-Integration** - Eingebettete Videos
 
 ### Modulare Struktur
 
 ```
-v008/
-├── index.html          (~382 Zeilen - mit SoundCloud Playern)
+├── index.html          - Main HTML mit SoundCloud Playern
 ├── css/
-│   ├── base.css        (73 Zeilen)   - Variables, Reset, Background
-│   ├── header.css      (84 Zeilen)   - Navigation & Logo
-│   ├── hero.css        (145 Zeilen)  - Hero, Logo, Button, Particles
-│   ├── sections.css    (~490 Zeilen) - About, Shows, Music, Platform Buttons
-│   ├── videos.css      (76 Zeilen)   - YouTube Section
-│   └── layout.css      (141 Zeilen)  - Contact, Footer, Responsive
+│   ├── base.css        - Variables, Reset, Dark Background
+│   ├── header.css      - Navigation & Logo
+│   ├── hero.css        - Hero, Logo, Button, Particles
+│   ├── sections.css    - About, Shows (Neon), Music, Platform Buttons
+│   ├── videos.css      - YouTube Section
+│   ├── layout.css      - Contact, Footer, Responsive
+│   └── scanline.css    - CRT Scanline Effekt (optional)
 ├── js/
-│   ├── audio.js        (26 Zeilen)   - Sound System (Hover/Click)
-│   ├── navigation.js   (56 Zeilen)   - Scrolling & Navigation
-│   ├── animations.js   (41 Zeilen)   - Logo-Pulsing, Parallax
-│   ├── particles.js    (120 Zeilen)  - Partikel-Generierung & Animation
-│   └── music-player.js (19 Zeilen)   - Auto-Pause
+│   ├── audio.js        - Sound System (hover.mp3, click.mp3, impact.mp3)
+│   ├── navigation.js   - Scrolling & Navigation
+│   ├── animations.js   - Logo Effects (parallax disabled)
+│   ├── particles.js    - Optimierte Partikel (40 Stück, 30fps, GPU)
+│   └── music-player.js - Auto-Pause
 ├── images/
 │   ├── sexpunktnull_logo_shirt_60x30cm_neon.png
 │   └── shows/          - Show-Fotos
 ├── sounds/
 │   ├── hover.mp3
 │   ├── click.mp3
+│   ├── impact.mp3      - ABDREHEN Button Sound
 │   └── music/          - (optional für lokale MP3s)
 ├── README.md
 ├── sitemap.xml
@@ -110,8 +111,7 @@ In `index.html` (Zeile ~140-180):
 </div>
 ```
 
-### Vergangene Shows hinzufügen (NEU in v003)
-In `index.html` (Zeile ~210-280):
+### Vergangene Shows hinzufügenIn `index.html` (Zeile ~210-280):
 ```html
 <div class="past-show-item">
     <div class="past-show-image">
@@ -128,8 +128,7 @@ In `index.html` (Zeile ~210-280):
 ```
 **Bilder:** Lege Fotos in `images/shows/` ab (empfohlen: 800x500px, JPG)
 
-### SoundCloud Player anpassen (NEU in v007)
-In `index.html` findest du für jeden Song einen SoundCloud Embed:
+### SoundCloud Player anpassenIn `index.html` findest du für jeden Song einen SoundCloud Embed:
 
 ```html
 <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" 
@@ -155,8 +154,7 @@ In `index.html` findest du für jeden Song einen SoundCloud Embed:
 </div>
 ```
 
-### Musik-Dateien hinzufügen (NEU in v005)
-1. **MP3-Dateien vorbereiten:**
+### Musik-Dateien hinzufügen1. **MP3-Dateien vorbereiten:**
    - Preview-Clips erstellen (30-60 Sekunden empfohlen)
    - Format: MP3, 320 kbps
    - Dateinamen: `nullpunkt-preview.mp3`, etc.
@@ -181,8 +179,7 @@ In `index.html` findest du für jeden Song einen SoundCloud Embed:
 - Copyright beachten (nur eigene Musik!)
 - Dateigrößen klein halten (max. 5-10 MB pro File)
 
-### Auto-Pause Funktion (NEU in v006)
-**Was ist das?**
+### Auto-Pause Funktion**Was ist das?**
 Wenn ein Song abgespielt wird, pausieren automatisch alle anderen Songs. So läuft immer nur ein Player gleichzeitig – bessere User Experience!
 
 **Wie funktioniert's?**
@@ -191,11 +188,17 @@ Das neue Modul `js/music-player.js` überwacht alle Audio-Elemente und pausiert 
 **Keine zusätzliche Konfiguration nötig!** Funktioniert automatisch mit allen `<audio>`-Tags auf der Seite.
 
 ### Partikel-Anzahl ändern
-In `js/particles.js` (Zeile 6):
+In `js/particles.js` (Zeile 9-10):
 ```javascript
-const PARTICLE_COUNT = 100; // Hier Anzahl ändern!
+const PARTICLE_COUNT = 40; // Hier Anzahl ändern! (Standard: 40 für Performance)
 ```
-Einfach die Zahl ändern und Seite neu laden.
+**Performance-Tipp:** 40 Partikel = optimale Balance zwischen Effekt und CPU-Last.
+
+### Scanline-Effekt aktivieren/deaktivieren
+In `index.html` die Zeile auskommentieren/aktivieren:
+```html
+<!-- <link rel="stylesheet" href="css/scanline.css?v=1"> -->
+```
 
 ### Glow-Intensität ändern
 In `css/hero.css` (Zeile 44):
@@ -225,6 +228,14 @@ In `css/hero.css` (Zeile 44):
 - **Problem**: JavaScript-Fehler
 - **Lösung**: Browser-Konsole prüfen (F12 → Console)
 
+### Partikel nicht sichtbar auf Mobile
+- **Problem**: Initiale Positionen nicht gesetzt
+- **Lösung**: Aktuelles particles.js setzt Positionen sofort
+
+### Logo "schwebt" beim Scrollen
+- **Problem**: Parallax-Effekt in animations.js
+- **Lösung**: Bereits deaktiviert (Zeile 6-13 auskommentiert)
+
 ## 📱 Browser-Kompatibilität
 
 - ✅ Chrome/Edge 90+
@@ -235,11 +246,3 @@ In `css/hero.css` (Zeile 44):
 ## 📄 Lizenz
 
 © 2025 SEXPUNKTNULL · Alle Rechte vorbehalten
-
----
-
-**Version:** v007  
-**Erstellt:** 2025-01-17  
-**Basiert auf:** v006  
-**Änderungen:** SoundCloud Embed Player + Platform Buttons für alle 3 Songs  
-**Nächste Version:** v008 (bei Änderungen)

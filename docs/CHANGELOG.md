@@ -1,5 +1,20 @@
 # Changelog
 
+## [v009] - 2026-01-23 - Summary
+
+**Major updates**: Performance optimizations, neon cyberpunk design, mobile fixes, scanline effect
+
+**Key improvements**:
+- ~70% CPU reduction (particles: 100→40, 60fps→30fps, GPU acceleration)
+- Super dark background with neon accents
+- Fixed logo scroll jitter on mobile
+- Optional CRT scanline effect (css/scanline.css)
+- Impact sound for ABDREHEN button
+- Compact tile layouts for mobile
+- README.md: Removed version tracking (now version-agnostic, history in CHANGELOG only)
+
+---
+
 ## 2026-01-23 - Particle Performance
 ### Optimized
 - Reduced particles: 100 → 40
@@ -9,6 +24,8 @@
 - Removed scale flickering
 - Added will-change hint
 - ~70% CPU reduction
+### Fixed
+- Particles now visible on mobile (set initial positions immediately)
 
 ## 2026-01-23 - Scanline Effect
 ### Added

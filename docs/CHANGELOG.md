@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-01-23 - Scanline Effect
+### Added
+- CRT-style scanline effect in separate css/scanline.css (easy to disable by commenting out)
+- Cache: v29
+
+## 2026-01-23 - Fix Black Area Animation
+### Fixed
+- Disabled meshFloat animation causing black vertical area on right side
+- Cache: v27
+
 ## 2026-01-23 - ABDREHEN Impact Sound
 ### Changed
 - ABDREHEN button now uses impact.mp3 instead of click.mp3

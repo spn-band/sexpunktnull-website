@@ -36,7 +36,7 @@ if (ctaButton && heroLogoWrapper) {
     
     // Click sound and scroll
     ctaButton.addEventListener('click', () => {
-        playClickSound();
+        playImpactSound();
         document.querySelector('#shows').scrollIntoView({ behavior: 'smooth' });
     });
 }

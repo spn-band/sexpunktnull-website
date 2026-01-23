@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-01-23 - ABDREHEN Impact Sound
+### Changed
+- ABDREHEN button now uses impact.mp3 instead of click.mp3
+
 ## 2026-01-23 - Logo Scroll Fix (Final)
 ### Fixed
 - **animations.js**: Disabled parallax effect (translateY) causing logo to lag behind page scroll

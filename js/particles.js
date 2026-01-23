@@ -4,7 +4,7 @@
 
 // TEMPORARILY DISABLED - Uncomment below to re-enable
 
-/*
+
 // PARTICLE COUNT - Change this number to adjust particle count
 const PARTICLE_COUNT = 100;
 
@@ -117,4 +117,4 @@ if (particles.length > 0 && particlesContainer) {
     // Start the animation
     animateParticles();
 }
-*/
+

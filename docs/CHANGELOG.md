@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-01-23 - Logo Scroll Fix (Final)
+### Fixed
+- **animations.js**: Disabled parallax effect (translateY) causing logo to lag behind page scroll
+- **animations.js**: Disabled random pulse effect (transform scale) causing jitter
+- Logo now moves 1:1 with page content
+
 ## 2026-01-23 - Color & Layout Tweaks
 ### Changed
 - Background: Super dark/almost black (#000000)

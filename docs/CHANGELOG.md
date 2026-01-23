@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-01-23 - Color & Layout Tweaks
+### Changed
+- Background: Super dark/almost black (#000000)
+- Subtitle & titles: Restored pink→green→blue gradient (#ff0080 → #00ff88 → #00d4ff)
+- Section titles: Centered, smaller size (clamp 2rem-3.5rem), animated colored underline
+- Tile titles: Added gradient to past shows, music albums, and video titles
+- Cache: v14 for sections.css & videos.css
+
 ## [2025-01-22] - Glassmorphism Redesign
 
 ### Changed - FULL DESIGN OVERHAUL

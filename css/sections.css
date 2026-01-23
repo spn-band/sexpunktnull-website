@@ -11,14 +11,36 @@ section {
 
 .section-title {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: clamp(2rem, 5vw, 3.5rem);
     text-align: center;
     margin-bottom: 3rem;
-    background: linear-gradient(90deg, var(--accent-pink), var(--accent-purple), var(--accent-blue));
+    background: linear-gradient(90deg, #ff0080, #00ff88, #00d4ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    text-transform: uppercase;
     letter-spacing: 4px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 3px;
+    background: linear-gradient(90deg, #ff0080, #00ff88, #00d4ff);
+    box-shadow: 0 0 10px #ff0080;
+    animation: expandWidth 1s ease-out;
+}
+
+@keyframes expandWidth {
+    from { width: 0; }
+    to { width: 60%; }
 }
 
 /* =====================
@@ -222,6 +244,10 @@ section {
     font-size: 1.3rem;
     letter-spacing: 2px;
     margin-bottom: 0.3rem;
+    background: linear-gradient(90deg, #ff0080, #00ff88, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .past-show-info p {
@@ -266,6 +292,10 @@ section {
     font-size: 1.5rem;
     letter-spacing: 2px;
     margin-bottom: 0.3rem;
+    background: linear-gradient(90deg, #ff0080, #00ff88, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .album p {

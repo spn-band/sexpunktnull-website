@@ -16,9 +16,9 @@
     --accent-cyan: #00d4ff;
 
     /* Backgrounds */
-    --bg-gradient-1: #0f0c29;
-    --bg-gradient-2: #302b63;
-    --bg-gradient-3: #24243e;
+    --bg-gradient-1: #0a0a0a;
+    --bg-gradient-2: #050505;
+    --bg-gradient-3: #000000;
 
     /* Text */
     --text: #ffffff;
@@ -47,7 +47,7 @@ body {
     color: var(--text);
     overflow-x: hidden;
     min-height: 100vh;
-    background: linear-gradient(135deg, var(--bg-gradient-1) 0%, var(--bg-gradient-2) 50%, var(--bg-gradient-3) 100%);
+    background: #000000;
     background-attachment: fixed;
 }
 

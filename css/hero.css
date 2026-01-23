@@ -48,7 +48,7 @@
 .hero-subtitle {
     font-family: 'Bebas Neue', sans-serif;
     font-size: clamp(1.5rem, 4vw, 3rem);
-    background: linear-gradient(90deg, var(--accent-pink), var(--accent-purple), var(--accent-blue));
+    background: linear-gradient(90deg, #ff0080, #00ff88, #00d4ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

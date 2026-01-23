@@ -1,5 +1,17 @@
 # Changelog
 
+## 2026-01-24 - Fireball Effect
+### Added
+- Alpha channel video effect (fireball_1/2/3.webm) overlaying hero logo
+- Randomly selects 1 of 3 fireball videos
+- Randomly mirrors video 50% of the time
+- Plays sporadically every 1-4 seconds
+- Vignette mask fadeout (radial gradient) for soft edges
+- videos/ folder for video assets
+- js/fireball.js for random selection & playback logic
+- CSS positioning in hero.css (z-index: 3, above logo & particles)
+- Cache: hero.css v32
+
 ## [v009] - 2026-01-23 - Summary
 
 **Major updates**: Performance optimizations, neon cyberpunk design, mobile fixes, scanline effect

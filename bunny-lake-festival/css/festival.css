@@ -1,0 +1,339 @@
+/* ================================
+   BUNNY LAKE FESTIVAL STYLES
+   Glassmorphism theme with neon accents
+   ================================ */
+
+/* Hero section with festival branding */
+.festival-hero {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px 60px;
+    background: radial-gradient(circle at center, rgba(139, 0, 139, 0.15), transparent 70%);
+}
+
+.festival-hero-logo {
+    max-width: 400px;
+    width: 100%;
+    margin-bottom: 30px;
+    filter: drop-shadow(0 0 40px rgba(255, 0, 255, 0.8));
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.festival-subtitle {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #ff0080, #7928ca, #00d9ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 10px;
+}
+
+.festival-date-location {
+    font-family: 'Oswald', sans-serif;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+/* Line Up Grid - Vertical timeline style */
+.lineup-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.lineup-item {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 25px 30px;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 20px;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.lineup-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 40px rgba(255, 0, 255, 0.3);
+    border-color: rgba(255, 0, 255, 0.5);
+}
+
+.lineup-time {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, #ff0080, #7928ca);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 2px;
+}
+
+.lineup-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.lineup-band-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 3px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.lineup-genre {
+    font-family: 'Oswald', sans-serif;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Music Section - Band blocks with audio players */
+.festival-music-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.band-music-block {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+
+.band-music-block:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 40px rgba(0, 217, 255, 0.2);
+    border-color: rgba(0, 217, 255, 0.4);
+}
+
+.band-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #00d9ff, #7928ca, #ff0080);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 20px;
+}
+
+.audio-players {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.audio-player-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.track-title {
+    font-family: 'Oswald', sans-serif;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.audio-player {
+    width: 100%;
+    height: 40px;
+    filter: brightness(0.9) saturate(1.2);
+}
+
+.audio-player::-webkit-media-controls-panel {
+    background: linear-gradient(90deg, rgba(139, 0, 139, 0.3), rgba(0, 217, 255, 0.3));
+    border-radius: 10px;
+}
+
+/* Location Section */
+.location-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.location-info {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.location-info h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 3px;
+    background: linear-gradient(135deg, #ff0080, #00d9ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 20px;
+}
+
+.location-info p {
+    font-family: 'Oswald', sans-serif;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.location-address {
+    font-size: 1.1rem;
+    color: #fff !important;
+    margin-bottom: 10px;
+}
+
+.location-map-container {
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    height: 450px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.location-map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    filter: brightness(0.8) saturate(1.2);
+}
+
+/* Placeholder map if image needed */
+.placeholder-map {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(139, 0, 139, 0.2), rgba(0, 217, 255, 0.2));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    padding: 20px;
+}
+
+/* Footer */
+.festival-footer {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.festival-footer p {
+    font-family: 'Oswald', sans-serif;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 15px;
+}
+
+.festival-footer a {
+    color: #00d9ff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.festival-footer a:hover {
+    color: #ff0080;
+    text-shadow: 0 0 10px rgba(255, 0, 128, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .lineup-item {
+        grid-template-columns: 80px 1fr;
+        padding: 20px;
+    }
+
+    .lineup-time {
+        font-size: 1.8rem;
+    }
+
+    .lineup-band-name {
+        font-size: 1.5rem;
+    }
+
+    .location-content {
+        grid-template-columns: 1fr;
+    }
+
+    .festival-hero-logo {
+        max-width: 280px;
+    }
+
+    .festival-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .festival-date-location {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .lineup-item {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .lineup-time {
+        font-size: 1.5rem;
+    }
+
+    .lineup-band-name {
+        font-size: 1.3rem;
+    }
+
+    .band-name {
+        font-size: 1.5rem;
+    }
+
+    .band-music-block {
+        padding: 20px;
+    }
+
+    .location-map-container {
+        height: 300px;
+    }
+}

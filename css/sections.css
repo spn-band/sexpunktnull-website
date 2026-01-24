@@ -153,7 +153,9 @@ section {
     font-size: 0.95rem;
 }
 
-.show-ticket {
+.show-ticket,
+a.show-ticket {
+    display: inline-block;
     padding: 0.6rem 1.5rem;
     background: linear-gradient(135deg, var(--accent-pink), var(--accent-purple));
     color: white;
@@ -163,11 +165,13 @@ section {
     font-size: 1rem;
     letter-spacing: 2px;
     cursor: pointer;
+    text-decoration: none;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(196, 113, 237, 0.3);
 }
 
-.show-ticket:hover {
+.show-ticket:hover,
+a.show-ticket:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 20px rgba(196, 113, 237, 0.5);
 }

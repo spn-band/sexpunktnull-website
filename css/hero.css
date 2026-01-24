@@ -149,6 +149,13 @@
     opacity: 1;
 }
 
+/* Disable fireball on mobile (alpha channel not supported) */
+@media (hover: none) {
+    .fireball-effect {
+        display: none !important;
+    }
+}
+
 /* Particles */
 .particles {
     position: absolute;

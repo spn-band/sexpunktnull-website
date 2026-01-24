@@ -5,6 +5,9 @@
 // CONFIGURATION - Set to false for single video mode (only 1 at a time) or true for multishot (2 possible videos overlapping)
 const DUAL_FIREBALL_MODE = false;
 
+// Fireball scale factor (1.0 = normal size, 0.5 = half size, 2.0 = double size)
+const FIREBALL_SCALE = 2;
+
 // Detect if mobile/iOS for format selection
 const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 const videoFormat = isMobile ? 'mp4' : 'webm';
@@ -29,9 +32,9 @@ function initFireball(videoElement) {
 
         // Random mirror 50% of the time
         if (Math.random() > 0.5) {
-            videoElement.style.transform = 'translate(-50%, -50%) scaleX(-1)';
+            videoElement.style.transform = `translate(-50%, -50%) scale(${-FIREBALL_SCALE}, ${FIREBALL_SCALE})`;
         } else {
-            videoElement.style.transform = 'translate(-50%, -50%)';
+            videoElement.style.transform = `translate(-50%, -50%) scale(${FIREBALL_SCALE})`;
         }
 
         videoElement.classList.add('playing');

@@ -5,11 +5,15 @@
 // CONFIGURATION - Set to false for single video mode (only 1 at a time) or true for multishot (2 possible videos overlapping)
 const DUAL_FIREBALL_MODE = false;
 
-// Available fireball videos
+// Detect if mobile/iOS for format selection
+const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+const videoFormat = isMobile ? 'mp4' : 'webm';
+
+// Available fireball videos (will use mp4 on mobile, webm on desktop)
 const fireballVideos = [
-    'videos/fireball_1.webm',
-    'videos/fireball_2.webm',
-    'videos/fireball_3.webm'
+    `videos/fireball_1.${videoFormat}`,
+    `videos/fireball_2.${videoFormat}`,
+    `videos/fireball_3.${videoFormat}`
 ];
 
 // Initialize fireball effect for a video element

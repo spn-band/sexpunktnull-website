@@ -2,9 +2,10 @@
 
 ## 2026-01-24 - Fireball Effect
 ### Added
-- Alpha channel video effect (fireball_1/2/3.webm) overlaying hero logo
+- Alpha channel video effect (fireball_1/2/3.webm/.mp4) overlaying hero logo
 - **Two simultaneous videos** - can overlap for more dynamic effect
 - **Easy mode switch**: `DUAL_FIREBALL_MODE` constant (true/false) to toggle between 1 or 2 videos
+- **Mobile alpha support**: Auto-detects mobile and uses MP4 (HEVC with alpha), desktop uses WebM
 - Randomly selects 1 of 3 fireball videos per playback
 - Randomly mirrors video 50% of the time
 - Each video plays independently every 1-5 seconds
@@ -14,6 +15,7 @@
 - CSS positioning in hero.css (z-index: 3, above logo & particles)
 ### Fixed
 - Top edge harsh cutoff - added linear gradient mask for smooth fadeout on all edges
+- Mobile alpha channel black issue - uses MP4/HEVC instead of WebM on mobile devices
 - Cache: hero.css v33
 
 ## [v009] - 2026-01-23 - Summary

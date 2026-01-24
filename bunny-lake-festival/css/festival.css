@@ -220,6 +220,22 @@
     margin-bottom: 10px;
 }
 
+.location-sign-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.location-sign-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 30px rgba(255, 0, 128, 0.3);
+}
+
 .location-map-container {
     border-radius: 20px;
     overflow: hidden;

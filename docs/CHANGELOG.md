@@ -3,15 +3,17 @@
 ## 2026-01-24 - Fireball Effect
 ### Added
 - Alpha channel video effect (fireball_1/2/3.webm) overlaying hero logo
-- Randomly selects 1 of 3 fireball videos
+- **Two simultaneous videos** - can overlap for more dynamic effect
+- **Easy mode switch**: `DUAL_FIREBALL_MODE` constant (true/false) to toggle between 1 or 2 videos
+- Randomly selects 1 of 3 fireball videos per playback
 - Randomly mirrors video 50% of the time
-- Plays sporadically every 1-3 seconds
-- Composite mask: linear gradient (top/bottom fadeout) + radial vignette (soft edges)
+- Each video plays independently every 1-5 seconds
+- Composite mask: linear gradients (top/bottom/left/right) + radial vignette (soft edges)
 - videos/ folder for video assets
-- js/fireball.js for random selection & playback logic
+- js/fireball.js for random selection & playback logic (refactored for 2 videos)
 - CSS positioning in hero.css (z-index: 3, above logo & particles)
 ### Fixed
-- Top edge harsh cutoff - added linear gradient mask for smooth top/bottom fadeout
+- Top edge harsh cutoff - added linear gradient mask for smooth fadeout on all edges
 - Cache: hero.css v33
 
 ## [v009] - 2026-01-23 - Summary

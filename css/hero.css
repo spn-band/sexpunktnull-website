@@ -134,12 +134,12 @@
     mask-image:
         linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%),
         linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%),
-        radial-gradient(ellipse 100% 60% at center, black 40%, transparent 80%);
+        radial-gradient(ellipse at center, black 60%, transparent 85%);
         /* radial-gradient(ellipse at center, black 40%, transparent 80%);  */
     -webkit-mask-image:
         linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%),
         linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%),
-        radial-gradient(ellipse at center, black 40%, transparent 80%);
+        radial-gradient(ellipse at center, black 50%, transparent 85%);
         /* radial-gradient(ellipse 100% 60% at center, black 40%, transparent 80%); */
     mask-composite: intersect;
     -webkit-mask-composite: source-in;

@@ -46,11 +46,18 @@ const logoLink = document.querySelector('#logo-link');
 if (logoLink) {
     // Hover sound
     logoLink.addEventListener('mouseenter', playHoverSound);
-    
+
     // Click sound and scroll to top
     logoLink.addEventListener('click', (e) => {
         e.preventDefault();
         playClickSound();
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+}
+
+// Back button - add sounds for external links
+const backButton = document.querySelector('a[href="../index.html"]');
+if (backButton) {
+    backButton.addEventListener('mouseenter', playHoverSound);
+    backButton.addEventListener('click', playClickSound);
 }

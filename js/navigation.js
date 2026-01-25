@@ -46,7 +46,7 @@ const logoLink = document.querySelector('#logo-link');
 if (logoLink) {
     // Hover sound
     logoLink.addEventListener('mouseenter', playHoverSound);
-    
+
     // Click sound and scroll to top
     logoLink.addEventListener('click', (e) => {
         e.preventDefault();
@@ -54,3 +54,9 @@ if (logoLink) {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 }
+
+// Show ticket buttons - add sounds for all ticket/festival info buttons
+document.querySelectorAll('.show-ticket').forEach(button => {
+    button.addEventListener('mouseenter', playHoverSound);
+    button.addEventListener('click', playClickSound);
+});

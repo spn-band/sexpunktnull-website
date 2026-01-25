@@ -25,6 +25,7 @@
 - Auto-pause functionality for audio players
 - Custom Punk font (@font-face) for festival subtitle
 - Complete independence from main site (all assets self-contained)
+- Interactive sound effects for navigation (hover, click, impact sounds)
 
 ### Design
 - Neon gradient color scheme (pink/purple/cyan)
@@ -53,6 +54,10 @@ bunny-lake-festival/
 │   ├── navigation.js
 │   ├── music-player.js
 │   └── audio.js
+├── sounds/
+│   ├── click.mp3
+│   ├── hover.mp3
+│   └── impact.mp3
 ├── assets/
 │   ├── fonts/
 │   │   ├── 1_Punk.ttf

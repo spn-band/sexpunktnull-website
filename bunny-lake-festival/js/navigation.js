@@ -6,14 +6,22 @@
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     // Hover sound for nav links
     anchor.addEventListener('mouseenter', playHoverSound);
-    
+
     // Click sound and scroll
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         playClickSound();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // Calculate offset for fixed header (higher on mobile)
+            const isMobile = window.innerWidth <= 768;
+            const headerOffset = isMobile ? 20 : 20; // ADJUST SPACE BETWEEN HEADER AN AUTO POSITION FOR SECTIONS! MOBILE OFFSET : DESKTOP OFFSET
+            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
         }
     });
 });

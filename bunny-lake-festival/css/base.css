@@ -1,0 +1,128 @@
+/* ============================================
+   BASE.CSS - Glassmorphism Foundation
+   ============================================ */
+
+:root {
+    /* Glassmorphism color palette */
+    --glass-white: rgba(255, 255, 255, 0.1);
+    --glass-white-strong: rgba(255, 255, 255, 0.2);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-shadow: rgba(0, 0, 0, 0.1);
+
+    /* Accent colors - softer neon */
+    --accent-pink: #ff6b9d;
+    --accent-purple: #c471ed;
+    --accent-blue: #12c2e9;
+    --accent-cyan: #00d4ff;
+
+    /* Backgrounds */
+    --bg-gradient-1: #0a0a0a;
+    --bg-gradient-2: #050505;
+    --bg-gradient-3: #000000;
+
+    /* Text */
+    --text: #ffffff;
+    --text-muted: rgba(255, 255, 255, 0.7);
+
+    /* Legacy compatibility */
+    --neon-pink: #ff6b9d;
+    --neon-green: #00d4aa;
+    --neon-cyan: #12c2e9;
+    --bg-dark: #0f0c29;
+    --bg-darker: #0a0820;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    color: var(--text);
+    overflow-x: hidden;
+    min-height: 100vh;
+    background: #000000;
+    background-attachment: fixed;
+}
+
+/* Animated mesh gradient overlay - DISABLED (causes black area on right side) */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(ellipse at 20% 20%, rgba(196, 113, 237, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 30%, rgba(18, 194, 233, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 40% 80%, rgba(255, 107, 157, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* @keyframes meshFloat {
+    0%, 100% {
+        transform: scale(1) translate(0, 0);
+    }
+    33% {
+        transform: scale(1.05) translate(2%, -2%);
+    }
+    66% {
+        transform: scale(0.98) translate(-2%, 2%);
+    }
+} */
+
+/* Glass utility class */
+.glass {
+    background: var(--glass-white);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+}
+
+.glass-strong {
+    background: var(--glass-white-strong);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+}
+
+/* Selection styling */
+::selection {
+    background: var(--accent-purple);
+    color: white;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--glass-white-strong);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Disable heavy effects on touch devices */
+@media (hover: none) {
+    body::before {
+        animation: none;
+    }
+}

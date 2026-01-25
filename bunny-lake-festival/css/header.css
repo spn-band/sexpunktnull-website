@@ -1,0 +1,124 @@
+/* ============================================
+   HEADER.CSS - Glassmorphism Navigation
+   ============================================ */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(15, 12, 41, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--glass-border);
+    box-shadow: 0 4px 30px var(--glass-shadow);
+    z-index: 100;
+    padding: 1rem 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo {
+    height: 50px;
+}
+
+.logo img {
+    height: 100%;
+    width: auto;
+    filter: drop-shadow(0 0 8px rgba(196, 113, 237, 0.4));
+    transition: filter 0.3s ease;
+}
+
+.logo img:hover {
+    filter: drop-shadow(0 0 15px rgba(196, 113, 237, 0.7));
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent-pink), var(--accent-purple), var(--accent-blue));
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--text);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ===================
+   HEADER RESPONSIVE
+   =================== */
+@media (max-width: 768px) {
+    header {
+        padding: 0.5rem 1rem;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .logo {
+        height: 40px;
+    }
+
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem 1.5rem;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 0.4rem 0.8rem;
+    }
+
+    .logo {
+        height: 35px;
+    }
+
+    nav ul {
+        gap: 0.5rem 1rem;
+    }
+
+    nav a {
+        font-size: 0.8rem;
+    }
+}

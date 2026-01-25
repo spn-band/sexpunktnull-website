@@ -126,8 +126,11 @@
     font-family: 'Punk', 'Bebas Neue', sans-serif;
     font-size: 1.8rem;
     letter-spacing: 3px;
-    color: #19ec8d;
     text-transform: uppercase;
+    background: linear-gradient(90deg, #ff0080, #7928ca, #00d9ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .lineup-genre {

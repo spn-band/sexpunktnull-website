@@ -153,6 +153,29 @@
     background-clip: text;
 }
 
+.lineup-band-text {
+    font-family: 'Punk', 'Anton', 'Impact', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #ff0080, #7928ca, #00d9ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.lineup-band-number {
+    font-family: 'Anton', 'Impact', sans-serif;
+    font-size: 2.3rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    /* background: linear-gradient(90deg, #ff0080, #7928ca, #00d9ff); */
+    background: #ff0080;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
 .lineup-genre {
     font-family: 'Punktype', 'Oswald', sans-serif;
     /* color: rgba(255, 255, 255, 0.6); */
@@ -193,6 +216,31 @@
     letter-spacing: 4px;
     text-transform: uppercase;
     background: linear-gradient(90deg, #00d9ff, #7928ca, #ff0080);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 20px;
+}
+
+.band-text {
+    font-family: 'Punk', 'Anton', 'Impact', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #00d9ff, #7928ca, #ff0080);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 20px;
+}
+
+.band-number {
+    font-family: 'Anton', 'Impact', sans-serif;
+    font-size: 2.0rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    /* background: linear-gradient(90deg, #00d9ff, #7928ca, #ff0080); */
+    background: #00d9ff;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

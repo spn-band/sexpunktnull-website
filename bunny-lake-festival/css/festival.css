@@ -72,6 +72,22 @@
     position: relative;
     z-index: 2;
 }
+.festival-year {
+    font-family: 'Anton', sans-serif;
+    font-size: 4.5rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.6;
+    background: linear-gradient(90deg, #ff0080, #7928ca, #00d9ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-top: -12px;
+    margin-bottom: 4px;
+    position: relative;
+    z-index: 2;
+}
 
 .festival-date-location {
     font-family: 'Anton', 'Oswald', sans-serif;
